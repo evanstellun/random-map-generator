@@ -8,10 +8,10 @@
 一个基于Python的随机地形地图生成系统，采用客户端-服务器架构，提供实时地图生成和图形化界面操作。使用Perlin噪声算法生成逼真的地形，支持实时交互和高质量图片导出。
 
 ## 简介和背景
-我是一个上海地理生，热爱地理，喜欢在各种书里寻找美丽的等高设色地形图  
-慢慢的，全世界的地形似乎都被我看遍了，那种观察地形的乐趣似乎在慢慢消失  
-为了让我能够不丢失那一份热爱地理的初心，我创建了这样的一个随机生成地形图的项目，希望能够帮助到其他陷入“地图荒”的地理生们以及急需虚拟地图架空历史的政史学生们。  
-**谨以此项目，赠与每一个向往远方的地理爱好者**  
+我是一个上海地理生，热爱地理，喜欢在各种书里寻找美丽的等高设色地形图
+慢慢的，全世界的地形似乎都被我看遍了，那种观察地形的乐趣似乎在慢慢消失
+为了让我能够不丢失那一份热爱地理的初心，我创建了这样的一个随机生成地形图的项目，希望能够帮助到其他陷入"地图荒"的地理生们以及急需虚拟地图架空历史的政史学生们。
+**谨以此项目，赠与每一个向往远方的地理爱好者**
 ## 功能特点
 
 - **实时地图生成**: 使用Perlin噪声算法生成逼真的地形
@@ -190,8 +190,8 @@ ran_map/
 
 ```bash
 # 克隆项目
-git clone https://github.com/your-username/ran_map.git
-cd ran_map
+git clone https://github.com/evanstellun/random-map-generator.git
+cd random-map-generator
 
 # 创建虚拟环境
 python -m venv venv
@@ -218,15 +218,15 @@ python ranmap_server.py
 
 ## 联系方式
 
-- **问题反馈**: [GitHub Issues](https://github.com/your-username/ran_map/issues)
-- **功能建议**: [GitHub Discussions](https://github.com/your-username/ran_map/discussions)
-- **邮件联系**: your-email@example.com
+- **问题反馈**: [GitHub Issues](https://github.com/evanstellun/random-map-generator/issues)
+- **功能建议**: [GitHub Discussions](https://github.com/evanstellun/random-map-generator/discussions)
+- **邮件联系**: niweilun@outlook.com
 
 ---
 
 如果这个项目对你有帮助，请考虑给个星标！
 
-[![Star History Chart](https://api.star-history.com/svg?repos=your-username/ran_map&type=Date)](https://star-history.com/#your-username/ran_map&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=evanstellun/random-map-generator&type=Date)](https://star-history.com/#evanstellun/random-map-generator&Date)
 
 ## 开发信息
 
