@@ -2,7 +2,7 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-lightgrey.svg)](https://www.microsoft.com/windows)
 [![Status](https://img.shields.io/badge/status-active-brightgreen.svg)](https://github.com)
 
 一个基于Python的随机地形地图生成系统，采用客户端-服务器架构，提供实时地图生成和图形化界面操作。使用Perlin噪声算法生成逼真的地形，支持实时交互和高质量图片导出。
@@ -21,14 +21,15 @@
 - **加载动画**: 重新生成时显示进度提示
 - **自动依赖检查**: 启动时自动检测并安装所需依赖包
 - **高质量渲染**: 支持等高线显示和多层颜色渐变
-- **一键启动**: Windows用户可双击启动，无需命令行操作
+- **一键启动**: Windows和Linux用户均可一键启动，无需命令行操作
 
 ## 系统要求
 
 - **Python**: 3.6 或更高版本
-- **操作系统**: Windows（已测试Windows 10/11）
+- **操作系统**: Windows（已测试Windows 10/11）或 Linux（已测试Ubuntu 20.04+）
 - **内存**: 至少4GB
 - **显示器**: 1024x768或更高分辨率
+- **Linux要求**: 需要安装X11图形环境支持PyQt5
 
 ## 快速开始
 
@@ -45,7 +46,27 @@
 
 > **提示**: 服务器和GUI都会静默启动，不会显示控制台窗口，只显示图形界面。
 
-### 方法2：手动安装和启动
+### 方法2：一键启动（推荐Linux用户）
+
+1. 克隆或下载本项目到本地
+2. 进入项目目录
+3. 给启动器添加执行权限：
+   ```bash
+   chmod +x start.sh
+   ```
+4. 运行启动器：
+   ```bash
+   ./start.sh
+   ```
+5. 系统会自动完成：
+   - Python环境检查
+   - 依赖包验证与安装
+   - 服务器启动（后台运行）
+   - GUI界面启动
+
+> **提示**: 服务器和GUI会在后台运行，启动器窗口会显示运行状态。按Ctrl+C可停止所有程序。
+
+### 方法3：手动安装和启动
 
 1. **安装Python** (3.6+)
 2. **安装依赖包**
@@ -61,11 +82,19 @@
    python gui_app.py
    ```
 
-### 方法3：PowerShell启动
+### 方法4：PowerShell启动（Windows）
 
 ```powershell
 cd ran_map
 .\start.bat
+```
+
+### 方法5：Bash启动（Linux）
+
+```bash
+cd ran_map
+chmod +x start.sh
+./start.sh
 ```
 
 ## 系统架构
@@ -141,6 +170,7 @@ ran_map/
 ├── ranmap_server.py      # 地图生成服务器（端口5000）
 ├── gui_app.py            # PyQt5图形界面客户端
 ├── start.bat             # Windows一键启动器
+├── start.sh              # Linux一键启动器
 └── server.log            # 服务器运行日志
 └── maps/                 # 生成的地图保存目录
 ```
@@ -156,6 +186,7 @@ ran_map/
 | **依赖包安装失败** | 手动运行 `pip install -r requirements.txt`，检查网络连接 |
 | **编码问题** | 使用 `start.bat` 或在命令提示符中运行而非PowerShell |
 | **GUI无法启动** | 检查PyQt5是否正确安装，尝试 `pip install PyQt5` |
+| **Linux GUI问题** | 确保安装了X11图形环境，检查DISPLAY环境变量 |
 | **连接服务器失败** | 确保服务器已启动，检查防火墙设置 |
 
 ### 日志和调试
@@ -163,7 +194,7 @@ ran_map/
 - **服务器日志**: 查看 `server.log` 文件
 - **客户端错误**: 检查GUI界面错误提示
 - **启动问题**: 观察启动器输出信息
-- **网络问题**: 使用 `netstat -an | findstr :5000` 检查端口状态
+- **网络问题**: 使用 `netstat -an | findstr :5000` (Windows) 或 `netstat -an | grep :5000` (Linux) 检查端口状态
 
 ## 性能指标
 
@@ -236,6 +267,6 @@ python ranmap_server.py
 
 - **开发语言**: Python 3.6+
 - **主要依赖**: numpy, matplotlib, scipy, PyQt5
-- **开发环境**: Windows 10/11
+- **开发环境**: Windows 10/11, Ubuntu 20.04+
 - **版本**: 1.0
 - **最后更新**: 2025年8月
