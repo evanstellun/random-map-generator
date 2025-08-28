@@ -3,7 +3,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-lightgrey.svg)](https://www.microsoft.com/windows)
-[![Status](https://img.shields.io/badge/status-active-brightgreen.svg)](https://github.com)
+[![Status](https://img.shields.io/badge/status-paused)](https://github.com)
 
 一个基于Python的随机地形地图生成系统，采用客户端-服务器架构，提供实时地图生成和图形化界面操作。使用Perlin噪声算法生成逼真的地形，支持实时交互和高质量图片导出。
 
